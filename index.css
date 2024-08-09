@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 1, 11);
+}
+
+.formBox {
+  background-color: rgb(31, 12, 31);
+  border-radius: 1em;
+  padding: 2em;
+  width: 70%;
+  max-width: 500px;
+}
+
+.form__title {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.text-field input {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 4px 0;
+  background-color: rgb(141, 136, 127);
+}
+
+.text-field input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #ccc;
+  font-weight: 100;
+  font-size: 0.8em;
+}
+
+.submitbtn {
+  background-color: black;
+  color: #fff;
+  padding: 1em 3em;
+  border-radius: 2em;
+  border: none;
+}
+
+.submitBox {
+  display: flex;
+  justify-content: center;
+}
+
+.submitbtn:hover {
+  background-color: bisque;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Validation style */
+.invalid {
+  display: none;
+  color: rgb(170, 28, 28);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.valid {
+  display: none;
+  color: rgb(105, 242, 110); /* Green color for valid input */
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.text-field input.invalid + .invalid {
+  display: block;
+}
+
+.text-field input.valid + .valid {
+  display: block;
+}

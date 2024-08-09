@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./Index.css">
+</head>
+<body>
+    <!-- Test for simple text on regex101
+    using global and case insensite
+    -->
+
+    
+    <section>
+        <div class="formBox">
+        <form action="" id="registrationForm">
+            <div class="form__title">SignUp Page</div>
+            <div class="text-field">
+                <input placeholder="username" type="text" name="username" id="username">
+                <span class="invalid">username must be filled and contain 
+                    5 - 12 characters
+                </span>
+            </div>
+            <div class="text-field">
+                <input placeholder="email" type="text" name="email" id="email">
+                <span class="invalid"> email must be a vaild address e.g 
+                    me@mydomain.com
+                </span>
+            </div>
+
+            <div class="text-field">
+                <input placeholder="password" type="password" name="password" id="password">
+                <span class="invalid">password must be alphanumeric
+                    and be 8 - 20 character
+                </span>
+            </div>
+            <div class="text-field">
+                <input placeholder="telephone" type="text" name="telephone" id="telephone">
+                <span class="invalid">Telephone must be a valid Nigeria telephone number (11 digits)
+                </span>
+            </div>
+
+            <div class="text-field">
+                <input placeholder="profile slug" type="text" name="slug" id="profile_slug">
+                <span class="invalid">slug must constain only lowercase letters,numbers,hypen
+                    and 8 - 20 characters
+                </span>
+            </div>
+        <div class="submitBox">
+            <button class="submitbtn">Submit</button>
+        </div>
+        </div>
+        </form>
+    </section>
+    <script src="./Index.js"></script>
+</body>
+</html>
