@@ -5,7 +5,7 @@ const pattern = {
   emailRegExp: /^([a-zA-Z\d.%+-]+)@([a-z\d]{2,8})\.([a-z]{2,3})(\.[a-z]{2,3})?$/,
   passwordRegExp: /^[\w-@\.]{8,}$/,
   telephoneRegExp: /^[0][7-9][0-1][0-9]{8}$/,
-  profileSlug: /^[a-z0-9-]{8,20}$/, // Ensured the regex matches 8-20 characters
+  profileSlug: /^[a-z0-9-]{8,20}$/, // this is to ensure the regex matches 8-20 characters
 };
 
 const registrationForm = document.querySelector("#registrationForm");
@@ -19,7 +19,7 @@ const setValidationMessage = (inputElement, isValid) => {
   } else {
     invalidMessage.style.display = "block";
     setTimeout(() => {
-      invalidMessage.style.display = "none"; // Hide the message after 2 seconds
+      invalidMessage.style.display = "none"; // This hides the message after 2 seconds
     }, 2000);
   }
 };
@@ -37,7 +37,7 @@ registrationForm.addEventListener("submit", (event) => {
   
   let isTheFormValid = true;
   
-  // Hide all validation messages initially
+  // Hides all validation messages initially
   document.querySelectorAll('.invalid').forEach(item => item.style.display = 'none');
 
   // This is to validate each field
